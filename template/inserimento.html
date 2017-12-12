@@ -1,0 +1,8 @@
+<form name="form1" ng-submit="form1.$valid && store.sottomettiForm()" novalidate>
+  <!-- fa submit solo se form1.$valid  se non si mette fa il submit ma mette una classe ng-invalid-->
+  Nome: <input type="text" required ng-model="insert.nome">
+  Title:<input type="text" required ng-model="insert.cognome">
+  CDF: <input type="text" required ng-model="insert.cdf">
+
+  <input type="submit">
+</form>

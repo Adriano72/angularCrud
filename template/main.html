@@ -1,0 +1,15 @@
+<div>
+  <table ng-table="vm.tableParams" class="table" show-filter="true">
+      <tr ng-repeat="user in $data">
+          <td title="'Id'" filter="{ id: 'number'}" sortable="'id'">
+              {{user.id}}
+          </td>
+          <td title="'Title'" filter="{ title: 'text'}" sortable="'title'">
+              {{user.title}}
+          </td>
+          <td title="'Edit'">
+              <button>Delete</button>
+          </td>
+      </tr>
+  </table>
+</div>
