@@ -1,15 +1,21 @@
 <div>
-  <table ng-table="vm.tableParams" class="table" show-filter="true">
+  
+  <table ng-table="vm.tableParams"  class="table table-condensed table-bordered table-striped" show-filter="true">
       <tr ng-repeat="user in $data">
-          <td title="'Id'" filter="{ id: 'number'}" sortable="'id'">
-              {{user.id}}
+          <td title="'Image'">
+            <img ng-src="{{user.picture.thumbnail}}"/>
           </td>
-          <td title="'Title'" filter="{ title: 'text'}" sortable="'title'">
-              {{user.title}}
+          <td title="'First'" filter="{'name.first': 'text'}" sortable="'name.first'">
+              {{user.name.first}}
           </td>
+          <td title="'Last'" filter="{'name.last': 'text'}" sortable="'name.last'">
+              {{user.name.last}}
+          </td>
+          
           <td title="'Edit'">
               <button>Delete</button>
           </td>
       </tr>
   </table>
+  
 </div>
