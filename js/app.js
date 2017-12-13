@@ -4,6 +4,7 @@ app.controller('StoreController', function($scope, $http, getLista, NgTableParam
 
   self = this;
   getLista.fetchData().success(function(data){
+      console.log("DATA: ", data);
        self.tableParams = new NgTableParams({}, { dataset: data });
   })
 });
